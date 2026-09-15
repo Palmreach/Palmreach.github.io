@@ -1,0 +1,185 @@
+PALMREACH.COM.AU — GITHUB PAGES PUBLISHING GUIDE
+=================================================
+
+Website domain: https://palmreach.com.au
+Domain registrar/DNS: VentraIP
+Hosting: GitHub Pages
+Expected GitHub Pages hosting cost: $0 when using a public repository on GitHub Free.
+
+THIS PACKAGE IS ALREADY PREPARED FOR GITHUB PAGES
+--------------------------------------------------
+- CNAME file already contains: palmreach.com.au
+- .nojekyll file included
+- sitemap.xml uses palmreach.com.au
+- robots.txt points to the sitemap
+- canonical page URLs use palmreach.com.au
+- original Palmreach logo installed
+- supplied official I-heart-NDIS Registered Provider logo installed
+- NDIS provider registration number is NOT displayed
+
+STEP 1 — CREATE OR OPEN YOUR GITHUB REPOSITORY
+----------------------------------------------
+Recommended repository name:
+Palmreach.github.io
+
+Upload ALL files and folders from this package into the ROOT of the repository.
+index.html must be visible in the root, not inside another folder.
+
+STEP 2 — ENABLE GITHUB PAGES
+----------------------------
+GitHub repository:
+Settings > Pages
+
+Under "Build and deployment":
+Source: Deploy from a branch
+Branch: main
+Folder: / (root)
+Save
+
+GitHub will give you a temporary github.io address.
+
+STEP 3 — ADD THE CUSTOM DOMAIN
+------------------------------
+Still under:
+Settings > Pages > Custom domain
+
+Enter:
+palmreach.com.au
+
+Save.
+
+The repository includes the CNAME file already, but adding the domain in GitHub Settings
+is still recommended.
+
+STEP 4 — VENTRAIP DNS FOR THE ROOT DOMAIN
+-----------------------------------------
+In VentraIP VIPcontrol:
+My Services > Domains > palmreach.com.au > DNS
+
+If you are using VentraIP DNS Hosting, add these FOUR A records for the root/apex domain.
+
+Type: A
+Hostname: blank/root
+Value: 185.199.108.153
+
+Type: A
+Hostname: blank/root
+Value: 185.199.109.153
+
+Type: A
+Hostname: blank/root
+Value: 185.199.110.153
+
+Type: A
+Hostname: blank/root
+Value: 185.199.111.153
+
+Remove conflicting old A records for the root if they point somewhere else.
+
+STEP 5 — WWW RECORD
+-------------------
+GitHub recommends also configuring www.
+
+The correct www CNAME value depends on your GitHub username or organisation name:
+
+Type: CNAME
+Hostname: www
+Value: palmreach.github.io
+
+GitHub username confirmed: Palmreach
+
+Do NOT use palmreach.com.au as the CNAME destination for www when GitHub instructs
+you to point it at USERNAME.github.io.
+
+STEP 6 — HTTPS
+--------------
+Once GitHub detects the DNS correctly:
+Settings > Pages
+
+Enable:
+Enforce HTTPS
+
+GitHub issues the HTTPS certificate automatically after DNS is correct. This may take time.
+
+STEP 7 — TEST BEFORE PROMOTING
+------------------------------
+Test:
+https://palmreach.com.au
+https://www.palmreach.com.au
+
+Check:
+- desktop
+- iPhone
+- Android
+- menu
+- Call button
+- Request Support
+- Refer a Participant
+- email links
+- every footer link
+- privacy and complaint pages
+
+STEP 8 — GOOGLE
+---------------
+After the site is live:
+1. Add palmreach.com.au to Google Search Console.
+2. Verify ownership.
+3. Submit:
+   https://palmreach.com.au/sitemap.xml
+4. Create or update the Google Business Profile for Palmreach.
+5. Link the Business Profile to palmreach.com.au.
+
+IMPORTANT ABOUT REFERRALS
+-------------------------
+This version does not save participant details to GitHub.
+The referral form prepares an email on the visitor's device instead.
+Do not accept NDIS numbers, diagnoses or detailed medical records through the public form.
+
+LATER UPGRADE
+-------------
+If Palmreach wants forms that submit directly without opening the visitor's email app,
+use a secure forms/backend service after reviewing privacy and data-handling requirements.
+
+
+EXACT DNS SETTINGS FOR PALMREACH.COM.AU
+---------------------------------------
+At VentraIP, leave your nameservers, MX records, email records and unrelated TXT records alone.
+
+For the ROOT domain (Hostname left blank in VentraIP), use:
+
+A    [blank]    185.199.108.153
+A    [blank]    185.199.109.153
+A    [blank]    185.199.110.153
+A    [blank]    185.199.111.153
+
+For WWW use:
+
+CNAME    www    palmreach.github.io
+
+TTL:
+Leave VentraIP's default TTL.
+
+Important:
+- Remove only old/conflicting A records for the root that point to another web host.
+- Remove an old/conflicting www A or CNAME before adding the GitHub www CNAME.
+- If the root currently has AAAA records pointing to another web host, remove those or replace them
+  with GitHub's IPv6 Pages records before enabling HTTPS.
+- Do NOT remove MX records or email-related TXT records.
+- Do NOT create a wildcard (*) record for GitHub Pages.
+
+GITHUB REPOSITORY
+-----------------
+For the simplest GitHub Pages setup with username Palmreach, create:
+
+Palmreach.github.io
+
+Then upload all website files directly into the repository root.
+The initial GitHub Pages address will be:
+
+https://palmreach.github.io
+
+After custom domain setup, visitors should use:
+
+https://palmreach.com.au
+
+and www.palmreach.com.au should redirect appropriately once both DNS records are configured.
