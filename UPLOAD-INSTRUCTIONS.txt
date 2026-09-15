@@ -1,0 +1,30 @@
+PALMREACH GITHUB ROOT-STRUCTURE FIX
+=================================
+
+Your GitHub upload placed CSS, JavaScript and images in the repository ROOT.
+The original HTML expected them inside an /assets folder.
+
+These corrected HTML files now match your existing GitHub repository exactly.
+
+UPLOAD THESE 8 FILES TO:
+Palmreach / Palmreach.github.io
+
+GitHub:
+Add file > Upload files
+
+Drag all 8 HTML files into the upload box.
+GitHub will warn that files with the same names already exist; that is expected.
+Commit the changes to the main branch.
+
+Do NOT delete:
+styles.css
+site.js
+palmreach-logo.png
+i-heart-ndis-registered.jpg
+palmreach-hero.jpg
+favicon-32.png
+icon-192.png
+icon-512.png
+or the other existing website files.
+
+After committing, wait roughly 1-2 minutes for GitHub Pages to redeploy.
